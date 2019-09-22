@@ -1,0 +1,21 @@
+.title-area {
+  background-color: white;
+
+  padding-left: 20px;
+  padding-top: 25px;
+
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 10px;
+}
+
+.title {
+  font-size: 1.3rem;
+  color: rgb(34, 34, 34);
+}
+
+.subtitle {
+  color: rgb(153, 153, 153);
+  padding-bottom: 25px;
+}

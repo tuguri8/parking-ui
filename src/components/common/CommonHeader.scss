@@ -1,0 +1,31 @@
+.item {
+  background-color: #5097d5;
+  color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.sub_item {
+  flex: 1 1 0;
+}
+
+.ant-menu-item-selected {
+  color: white !important;
+  border-bottom: 5px solid white !important;
+}
+
+.header {
+  background-color: 'white';
+  padding: '25px 15px 25px 15px';
+  display: flex;
+  justify-content: center;
+}
+
+
+.header-text {
+  font-size: 1.1rem;
+  color: rgb(34, 34, 34);
+  font-weight: bold;
+}
