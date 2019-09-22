@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const get = (path, params) => {
-    return axios.get("http://localhost:8080" + path, {params: params});
+    return axios.get(process.env.REACT_APP_HOST + path, {params: params});
 };
 
 export const api = {

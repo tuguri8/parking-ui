@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Spin} from 'antd';
+import {Spin, Icon} from 'antd';
 import {inject, observer} from 'mobx-react/index';
 import CommonHeader from "../common/CommonHeader";
 import ParkingImg from "../ParkingImg"
@@ -22,14 +22,18 @@ class MainContainer extends Component {
 
     render() {
       const {parkingInfoStore} = this.props;
+      const antIcon = <Icon type="loading" style={{ fontSize: 24 }} spin />;
+
         return (
             <React.Fragment>
                 <CommonHeader/>
-                <ParkingImg/>
-                <TitleInfo data={parkingInfoStore.parkingData}/>
-                <BasicInfo data={parkingInfoStore.parkingData}/>
-                <AdditionalInfo data={parkingInfoStore.parkingData}/>
-                <HourInfo data={parkingInfoStore.parkingData}/>
+                <Spin indicator={antIcon} spinning={parkingInfoStore.loading} tip="로딩중">
+                  <ParkingImg/>
+                  <TitleInfo data={parkingInfoStore.parkingData}/>
+                  <BasicInfo data={parkingInfoStore.parkingData}/>
+                  <AdditionalInfo data={parkingInfoStore.parkingData}/>
+                  <HourInfo data={parkingInfoStore.parkingData}/>
+                </Spin>
             </React.Fragment>
         )
     }
