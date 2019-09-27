@@ -10,7 +10,7 @@ class BasicInfo extends Component {
     const {data} = this.props;
     const basicPriceStr = data.rates === 0 || data.timeRate === 0 ? "-" : `${data.rates}원/${data.timeRate}분`;
     const addPriceStr = data.addRates === 0 || data.addTimeRate === 0 ? "-" : `${data.addRates}원/${data.addTimeRate}분`;
-    const dayMaximumStr = data.dayMaximum === 0 ? "-" : data.dayMaximum;
+    const dayMaximumStr = data.dayMaximum === 0 ? "-" : `${data.dayMaximum}원`;
     return (
       <div className="basic">
           <Typography.Text type="" className="title">기본정보</Typography.Text>

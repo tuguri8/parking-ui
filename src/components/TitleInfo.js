@@ -8,9 +8,10 @@ import './TitleInfo.scss'
 class TitleInfo extends Component {
   render() {
     const {data} = this.props;
+    const titleStr = (data.parkingName).includes("주차장") ? data.parkingName : `${data.parkingName} 주차장`;
     return (
       <div className="title-area">
-          <Typography.Text type="" className="title">{data.parkingName + " 주차장"}</Typography.Text>
+          <Typography.Text type="" className="title">{titleStr}</Typography.Text>
           <Typography.Text type="" className="subtitle">{data.addr}</Typography.Text>
       </div>
     );
